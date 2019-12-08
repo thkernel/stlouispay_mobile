@@ -1,0 +1,60 @@
+{
+  "name": "kosanteplusmobile",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native-community/geolocation": "^1.4.2",
+    "native-base": "^2.12.1",
+    "npm-upgrade": "^2.0.2",
+    "react": "16.8.3",
+    "react-native": "0.59.8",
+    "react-native-background-fetch": "^2.0.8",
+    "react-native-background-task": "^0.2.1",
+    "react-native-btr": "^1.1.4",
+    "react-native-cli": "^2.0.1",
+    "react-native-collapsible": "^1.4.0",
+    "react-native-dialog-progress": "^1.0.2",
+    "react-native-document-scanner": "^1.4.2",
+    "react-native-dropdown": "0.0.6",
+    "react-native-elements": "^1.1.0",
+    "react-native-file-selector": "0.0.6",
+    "react-native-gesture-handler": "^1.2.1",
+    "react-native-linear-gradient": "^2.5.4",
+    "react-native-local-cli": "^1.0.0-alpha.5",
+    "react-native-maps": "^0.24.2",
+    "react-native-material-dropdown": "^0.11.1",
+    "react-native-modal-datetime-picker": "^7.4.2",
+    "react-native-paper": "^2.15.2",
+    "react-native-permissions": "^1.1.1",
+    "react-native-progress-bar-animated": "^1.0.6",
+    "react-native-push-notification": "^3.1.2",
+    "react-native-searchable-dropdown": "^1.0.6",
+    "react-native-snackbar": "^0.5.5",
+    "react-native-snap-carousel": "^3.8.0",
+    "react-native-sqlite-storage": "^3.3.10",
+    "react-native-vector-icons": "^6.4.2",
+    "react-navigation": "^3.11.0",
+    "react-navigation-material-bottom-tabs": "^1.0.0",
+    "rn-fetch-blob": "^0.10.15"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/runtime": "7.4.5",
+    "babel-jest": "24.8.0",
+    "jest": "24.8.0",
+    "metro-react-native-babel-preset": "0.54.1",
+    "react-test-renderer": "16.8.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts"
+    ]
+  }
+}
