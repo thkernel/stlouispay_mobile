@@ -9,28 +9,39 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, Alert, AsyncStorage } from "react-native";
 
-import HomeActivity from "./screens/HomeActivity";
-import LoginActivity from "./screens/LoginActivity";
+import HomeActivity from "./screens/HomeScreen";
+import LoginActivity from "./screens/LoginScreen";
 
 import { createStackNavigator, createAppContainer } from "react-navigation";
 
 
-import ListPharmacies from "./screens/ListPharmacies";
-import SignUp from "./screens/SignUp";
-import SignUpLast from "./screens/SignUpLast";
-import RequestRendezvous from "./screens/RequestRendezvous";
-import RequestRendezvousWithStructure from "./screens/RequestRendezvousWithStructure";
-import Profile from "./screens/Profile";
-import MapActivity from "./screens/MapActivity";
-import SplashScreenActivity from "./screens/SplashScreenActivity";
-import ShowHealthWorkerInfo from "./screens/ShowHealthWorkerInfo";
-import ShowStructureInfos from "./screens/ShowStructureInfos";
-import ShowFeedDetails from "./screens/ShowFeedDetails";
 
-import ListRendezVous from "./screens/profile/ListRendezVous";
-import About from "./screens/profile/About";
+import SignUp from "./screens/RegisterScreen";
+import SignUpLast from "./screens/SignUpLast";
+
+import Profile from "./screens/ProfileScreen";
+
+import SplashScreenActivity from "./screens/SplashScreen";
+
+
+
+
+import Portfolios from "./screens/Portfolios";
+import Organizations from "./screens/Organizations";
+import LatestCards from "./screens/LatestCards";
+import PortfolioDetails from "./screens/PortfolioDetails";
+import CardDetails from "./screens/CardDetails";
+import OrganizationDetails from "./screens/OrganizationDetails";
+
+import About from "./screens/profile/AboutScreen";
 import ShowProfile from "./screens/profile/ShowProfile";
 import Settings from "./screens/profile/Settings";
+
+import ScanQrcode from "./screens/ScanQrcodeScreen";
+import QrcodeData from "./screens/QrcodeDataScreen";
+import QrcodeDataDemo from "./screens/QrcodeDataScreenDemo";
+import SelectPortfolioDialog from "./screens/SelectPortfolioDialogScreen";
+
 
 
 export default class App extends Component {
@@ -56,13 +67,7 @@ const NavigationMenu = createStackNavigator({
     navigationOptions: {
       header: null
     }
-  }/*,
-  SearchMedicines:{
-    screen:ListAvailableMedicines,
-    navigationOptions: {
-      header: null
-    }
-  }*/,
+  },
   SignUpLast:{
     screen: SignUpLast,
     navigationOptions: {
@@ -81,50 +86,44 @@ const NavigationMenu = createStackNavigator({
       header: null
     }
   },
-  Pharmacies:{
-    screen: ListPharmacies,
-    navigationOptions: {
-      header: null
-    }
-  },
-  Map:{
-    screen: MapActivity,
-    navigationOptions: {
-      header: null
-    }
-  },
   Login: {
     screen: LoginActivity,
     navigationOptions: {
       header: null
     }
   },
-  ShowHealthWorkerInfo:{
-    screen:ShowHealthWorkerInfo,
+  Portfolios:{
+    screen: Portfolios,
     navigationOptions:{
       header:null
     }
   },
-  ShowStructureInfos: {
-    screen: ShowStructureInfos,
+  OrganizationDetails:{
+    screen: OrganizationDetails,
     navigationOptions:{
       header:null
     }
   },
-  RequestRendezvous:{
-    screen:RequestRendezvous,
+  Organizations:{
+    screen: Organizations,
     navigationOptions:{
       header:null
     }
   },
-  RequestRendezvous2:{
-    screen:RequestRendezvousWithStructure,
+  PortfolioDetails:{
+    screen: PortfolioDetails,
     navigationOptions:{
       header:null
     }
   },
-  ShowFeedDetails:{
-    screen:ShowFeedDetails,
+  CardDetails:{
+    screen: CardDetails,
+    navigationOptions:{
+      header:null
+    }
+  },
+  LatestCards:{
+    screen: LatestCards,
     navigationOptions:{
       header:null
     }
@@ -135,7 +134,6 @@ const NavigationMenu = createStackNavigator({
       header:null
     }
   }
-  ///
   ,
   ShowProfile:{
     screen:ShowProfile,
@@ -143,12 +141,7 @@ const NavigationMenu = createStackNavigator({
       header:null
     }
   },
-  Rendezvous:{
-    screen:ListRendezVous,
-    navigationOptions:{
-      header:null
-    }
-  },
+  
   About:{
     screen:About,
     navigationOptions:{
@@ -157,6 +150,30 @@ const NavigationMenu = createStackNavigator({
   },
   Settings:{
     screen:Settings,
+    navigationOptions:{
+      header:null
+    }
+  },
+  ScanQrcode:{
+    screen:ScanQrcode,
+    navigationOptions:{
+      header:null
+    }
+  },
+  QrcodeData:{
+    screen:QrcodeData,
+    navigationOptions:{
+      header:null
+    }
+  },
+  QrcodeDataDemo:{
+    screen:QrcodeDataDemo,
+    navigationOptions:{
+      header:null
+    }
+  },
+  SelectPortfolioDialog:{
+    screen:SelectPortfolioDialog,
     navigationOptions:{
       header:null
     }

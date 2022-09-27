@@ -49,7 +49,7 @@ export default class SignUpLast extends React.Component {
   render() {
     return (
       <ImageBackground
-        source={require("./../assets/boites.jpg")}
+        source={require("./../assets/icon-holilink.png")}
         style={styles.main}
       >
         <StatusBar backgroundColor="#003d33" hidden={false} />

@@ -102,9 +102,12 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.kosanteplusmobile"
+        applicationId "com.stlouispaymobile"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        missingDimensionStrategy 'react-native-camera', 'general'
+        missingDimensionStrategy 'react-native-camera', 'mlkit'
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
     }
@@ -116,10 +119,19 @@ android {
             include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
     }
+    signingConfigs {
+        release {
+                storeFile file('stlouispay_mobile.keystore')
+                storePassword 'Root@2022@#!*'
+                keyAlias 'stlouispay_mobile_alias'
+                keyPassword 'Root@2022@#!*'
+        }
+    }
     buildTypes {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
         }
     }
     // applicationVariants are e.g. debug, release
@@ -138,6 +150,20 @@ android {
 }
 
 dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation project(':react-native-camera')
+    implementation project(':react-native-svg')
+    implementation project(':@react-native-community_netinfo')
+    implementation project(':react-native-dialog-progress')
+    implementation project(':react-native-restart')
+    implementation project(':react-native-linear-gradient')
+    implementation project(':react-native-vector-icons')
+    implementation project(':react-native-gesture-handler')
+    implementation project(':react-native-background-task')
+    implementation project(':react-native-push-notification')
+    implementation project(':react-native-snackbar')
+    implementation project(':@react-native-community_geolocation')
+    implementation project(':@react-native-community_async-storage')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
